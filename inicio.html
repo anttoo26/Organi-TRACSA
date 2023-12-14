@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Operaciones y Logística</title>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <img src="images/tracsa.png" alt="Logo de la empresa">
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar...">
+        <button onclick="search()">Buscar</button>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Iniciar Sesión</a></li>
+        <li><a href="#">Ingresar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="oylt">
+    <h2>Operaciones y Logística</h2>
+  </section>
+
+  <section class="teams"><h2>Equipos</h2></section>
+
+  <script>
+    function openMembersPage(url) {
+      // Abre la nueva página en una nueva ventana o pestaña
+      window.open(url, '_blank');
+    }
+  </script>
+  
+  <section id="team-section">
+    <button class="member" onclick="openMembersPage('abastecimiento.html')">
+      <h2>Abastecimiento</h2>
+    </button>
+
+    <button class="member" onclick="openMembersPage('controldeinventario.html')">
+      <h2>Control de Inventario</h2>
+    </button>
+
+    <button class="member" onclick="openMembersPage('administrativo.html')">
+      <h2>Administrativo</h2>
+    </button>
+
+    <button class="member" onclick="openMembersPage('traficoycompliance.html')">
+      <h2>Tráfico y Compliance</h2>
+    </button>
+
+    <button class="member" onclick="openMembersPage('logisticaadmin.html')">
+      <h2>Logística Administrativa</h2>
+    </button>
+  </section>
+  <div class="yellow-rectangle"></div>
+</body>
+</html>

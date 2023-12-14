@@ -1,0 +1,130 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff; /* Fondo blanco */
+  color: #333; /* Texto negro */
+}
+
+header {
+  background-color: #000; /* Fondo negro para el encabezado */
+  color: #fff; /* Texto blanco para el encabezado */
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.search-bar input {
+  padding: 0.5em;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.search-bar button {
+  padding: 0.5em 1em;
+  background-color: #fcd116; /* Fondo amarillo para el botón de búsqueda */
+  color: #000; /* Texto negro para el botón de búsqueda */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logo img {
+  width: 180px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #000; 
+}
+
+nav li {
+  margin-right: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 15px; 
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #fcd116; 
+}
+
+.oylt {
+  text-align: center;
+  color: #000; 
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.oylt h2 {
+  margin: 0;
+  font-size: 1.8em;
+}
+.teams {
+  text-align: left;
+  color: #000; 
+  padding: 20px;
+  margin: 20px 0;
+}
+
+#team-section {
+  display: flex;
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan en varias líneas */
+  justify-content: space-around;
+  align-items: center;
+  padding: 2em;
+}
+
+.member {
+  text-align: center;
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Redondear los bordes */
+  background-color: #000; /* Fondo negro para los botones */
+  color: #fff; /* Texto blanco para los botones */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: calc(33.33% - 2em); /* Ajustar el ancho para 3 elementos en una fila con espacio entre ellos */
+  box-sizing: border-box; /* Incluir bordes y rellenos en el ancho total */
+}
+
+.member:hover {
+  background-color: #fcd116 ; /* Cambio de color al pasar el ratón */
+}
+
+.member h2 {
+  margin: 0;
+  font-size: 1.8em;
+  color: #fff;
+}
+
+
+.yellow-rectangle {
+  background-color: #fcd116; 
+  height: 50px; 
+  width: 100%;
+}
+

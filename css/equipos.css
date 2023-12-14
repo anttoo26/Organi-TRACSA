@@ -1,0 +1,108 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff; /* Fondo blanco */
+  color: #333; /* Texto negro */
+}
+
+header {
+  background-color: #000; /* Fondo negro para el encabezado */
+  color: #fff; /* Texto blanco para el encabezado */
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.search-bar input {
+  padding: 0.5em;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.search-bar button {
+  padding: 0.5em 1em;
+  background-color: #fcd116; /* Fondo amarillo para el botón de búsqueda */
+  color: #000; /* Texto negro para el botón de búsqueda */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logo img {
+  width: 180px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #000; 
+}
+
+nav li {
+  margin-right: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 15px; 
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #fcd116; 
+}
+
+#team-details {
+  background-color: #fff; /* Color de fondo de la sección de detalles del equipo */
+  padding: 20px;
+}
+
+.member-info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  text-align: center;
+}
+
+.member-info {
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+  background-color: #000; /* Color de fondo de la información del miembro */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: calc(33.33% - 20px);
+  box-sizing: border-box;
+
+}
+.member-info:hover {
+  background-color: #fcd116; 
+}
+
+.member-info h3 {
+  color: #fff; /* Color del título de la información del miembro */
+}
+
+.member-info p {
+  color: #ecf0f1; /* Color del texto de la información del miembro */
+}
