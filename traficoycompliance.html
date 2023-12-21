@@ -5,16 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/equipos.css">
   <title>Tráfico y Compliance</title>
+  <link rel="icon" type="image/x-icon" href="images/icon.png">
 </head>
 <body>
 
   <header>
     <div class="header-content">
-      <a href="inicio.html" class="logo"> <!-- Cambia "index.html" por la URL de tu página de inicio -->
+      <a href="inicio.html" class="logo">
         <img src="images/tracsa.png" alt="Logo de la empresa">
       </a>
       <div class="search-bar">
-        <input type="text" placeholder="Buscar...">
+        <input type="text" id="search-input" placeholder="Buscar..." oninput="dynamicSearch()">
         <button onclick="search()">Buscar</button>
       </div>
     </div>
@@ -25,16 +26,58 @@
       </ul>
     </nav>
   </header>
+  <div class="breadcrumbs">
+    <a href="inicio.html">Inicio</a>
+    &gt;
+    <a href="equiposinicio.html">Equipos</a>
+    &gt;
+    <a href="#">Tráfico y Compliance</a>
+  </div>
 
   <section id="team-details">
     <h2>Tráfico y Compliance</h2>
-  </section>
+    <div id="member-info-container">
 
-  <section id="member-info-container">
-    <button class="member-info" id="miembro1-info">
-      <h3>Nombre: </h3<>
-      <h3>Cargo: </h3>
-    </button>
+      <div class="member-info">
+        <a href="#">
+        <div class="circle">
+          <img src="images/gato.jpg" alt="Foto Miembro 1">
+        </div>
+        <h3>Nombre Miembro 1</h3>
+        <p>Cargo Miembro 1</p>
+      </a>
+      </div>
+
+      <div class="member-info">
+        <a href="#">
+        <div class="circle">
+          <img src="images/gato.jpg" alt="Foto Miembro 1">
+        </div>
+        <h3>Nombre Miembro 1</h3>
+        <p>Cargo Miembro 1</p>
+      </a>
+      </div>
+
+      <div class="member-info">
+        <a href="#">
+        <div class="circle">
+          <img src="images/gato.jpg" alt="Foto Miembro 1">
+        </div>
+        <h3>Nombre Miembro 1</h3>
+        <p>Cargo Miembro 1</p>
+      </a>
+      </div>
+
+      <div class="member-info">
+        <a href="#">
+        <div class="circle">
+          <img src="images/gato.jpg" alt="Foto Miembro 1">
+        </div>
+        <h3>Nombre Miembro 1</h3>
+        <p>Cargo Miembro 1</p>
+      </a>
+      </div>
+    </div>
   </section>
   
   <script src="script-details.js"></script>

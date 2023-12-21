@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
   <title>Operaciones y Logística</title>
+  <link rel="icon" type="image/x-icon" href="images/icon.png">
 </head>
 <body>
   <header>
     <div class="header-content">
-      <div class="logo">
+      <a href="inicio.html" class="logo">
         <img src="images/tracsa.png" alt="Logo de la empresa">
-      </div>
+      </a>
       <div class="search-bar">
-        <input type="text" placeholder="Buscar...">
+        <input type="text" id="search-input" placeholder="Buscar..." oninput="dynamicSearch()">
         <button onclick="search()">Buscar</button>
       </div>
     </div>
@@ -24,41 +25,117 @@
       </ul>
     </nav>
   </header>
-
-  <section class="oylt">
-    <h2>Operaciones y Logística</h2>
+  
+  <section class="orgchart">
+    <h2>Org Chart</h2>
   </section>
+  <ul id="team-tree">
+    <li class="team-member">
 
-  <section class="teams"><h2>Equipos</h2></section>
+      <img src="images/gatito.jpg" alt="Jefe">
+      <span>José De La Torre</span>
+      <span>CEO</span>
+      <button class="show-subordinates">5</button>
+      <!-- Agregar más subordinados aquí -->
+
+      <ul class="subordinates">
+
+        <li class="team-member">
+          <img src="images/gatito.jpg" alt="Subordinado 1">
+          <span>Agustín Lopéz</span>
+          <button class="show-subordinates">2</button>
+
+          <ul class="subordinates"><!--Agrega abajo del nombre-->
+
+            <li class="team-member">
+              <img src="images/gatito.jpg" alt="Subordinado 2">
+              <span>Mariana Gutierréz</span>
+              <button class="show-subordinates">1</button>
+
+              <ul class="subordinates"><!--Agrega abajo del nombre-->
+
+                <li class="team-member">
+                  <img src="images/gatito.jpg" alt="Subordinado 3">
+                  <span>Jacinto Nuñez</span>
+                </li>
+
+                <li class="team-member">
+                  <img src="images/gatito.jpg" alt="Subordinado 3">
+                  <span>Cecilia Laureano</span>
+                </li>
+
+                <li class="team-member">
+                  <img src="images/gatito.jpg" alt="Subordinado 3">
+                  <span>Elvira Aguilar</span>
+                </li>
+              </ul>
+              
+            </li>
+
+            <li class="team-member">
+              <img src="images/gatito.jpg" alt="Subordinado 3">
+              <span>Raúl Ramiréz</span>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="team-member">
+          <img src="images/gatito.jpg" alt="Subordinado 2">
+          <span>Ximena Torres</span>
+        </li>
+
+        <li class="team-member">
+          <img src="images/gatito.jpg" alt="Subordinado 3">
+          <span>Ramiro Salas</span>
+        </li>
+
+        <li class="team-member">
+          <img src="images/gatito.jpg" alt="Subordinado 4">
+          <span>Erica Manzano</span>
+
+          <button class="show-subordinates">2</button>
+              <ul class="subordinates"><!--Agrega abajo del nombre-->
+
+                <li class="team-member">
+                  <img src="images/gatito.jpg" alt="Subordinado 3">
+                  <span>Jazmin Robles</span>
+                </li>
+                <li class="team-member">
+                  <img src="images/gatito.jpg" alt="Subordinado 3">
+                  <span>Rodrigo Cruz</span>
+                </li>
+              </ul>
+        </li>
+
+        <li class="team-member">
+          <img src="images/gatito.jpg" alt="Subordinado 5">
+          <span>Esther Flores</span>
+        </li>
+
+    </li>
+  </ul>
 
   <script>
-    function openMembersPage(url) {
-      // Abre la nueva página en una nueva ventana o pestaña
-      window.open(url, '_blank');
-    }
+    document.addEventListener('DOMContentLoaded', function () {
+      const showSubordinatesButtons = document.querySelectorAll('.show-subordinates');
+
+      showSubordinatesButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const subordinatesList = this.parentElement.querySelector('.subordinates');
+          subordinatesList.classList.toggle('visible');
+        });
+      });
+    });
   </script>
-  
-  <section id="team-section">
-    <button class="member" onclick="openMembersPage('abastecimiento.html')">
-      <h2>Abastecimiento</h2>
-    </button>
-
-    <button class="member" onclick="openMembersPage('controldeinventario.html')">
-      <h2>Control de Inventario</h2>
-    </button>
-
-    <button class="member" onclick="openMembersPage('administrativo.html')">
-      <h2>Administrativo</h2>
-    </button>
-
-    <button class="member" onclick="openMembersPage('traficoycompliance.html')">
-      <h2>Tráfico y Compliance</h2>
-    </button>
-
-    <button class="member" onclick="openMembersPage('logisticaadmin.html')">
-      <h2>Logística Administrativa</h2>
-    </button>
+  <section id="teams">
+    <a href="equiposinicio.html">
+      <button type="teamsc">
+        <h2>Ver todos los equipos</h2>
+      </button>
+    </a>
   </section>
   <div class="yellow-rectangle"></div>
+  <script src="js/inicio.js"></script>
 </body>
 </html>

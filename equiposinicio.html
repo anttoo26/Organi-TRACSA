@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/equiposinicio.css">
+  <title>Operaciones y Logística</title>
+  <link rel="icon" type="image/x-icon" href="images/icon.png">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="inicio.html" class="logo">
+        <img src="images/tracsa.png" alt="Logo de la empresa">
+      </a>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Buscar..." oninput="dynamicSearch()">
+        <button onclick="search()">Buscar</button>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Iniciar Sesión</a></li>
+        <li><a href="#">Ingresar</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="breadcrumbs">
+    <a href="inicio.html">Inicio</a>
+    &gt;
+    <a href="#">Equipos</a>
+  </div>
+  <section class="oylt">
+    <h2>Operaciones y Logística</h2>
+  </section>
+
+  <section class="teams"><h2>Equipos</h2></section>
+  
+  <section id="team-section">
+    <a href="abastecimiento.html">
+      <button type="member">
+        <h2>Abastecimiento</h2>
+      </button>
+    </a>
+    <a href="controldeinventario.html">
+      <button type="member">
+        <h2>Control de inventario</h2>
+      </button>
+    </a>
+    <a href="administrativo.html">
+      <button type="member">
+        <h2>Administrativo</h2>
+      </button>
+    </a>
+    <a href="traficoycompliance.html">
+      <button type="member">
+        <h2>Tráfico y Compliance</h2>
+      </button>
+    </a>
+    <a href="logisticaadmin.html">
+      <button type="member">
+        <h2>Logística Administrativa</h2>
+      </button>
+    </a>
+  </section>
+  <div class="yellow-rectangle"></div>
+  <script src="js/inicio.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff; 
-  color: #333;
+  color: #000; 
 }
 
 header {
@@ -31,7 +31,6 @@ header {
   margin-right: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  font-family: 'Arial', sans-serif;
 }
 
 .search-bar button {
@@ -41,12 +40,6 @@ header {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-family: 'Arial', sans-serif;
-
-}
-.search-bar button:active {
-  background-color: #555; 
-  color: #fff;
 }
 
 .logo img {
@@ -77,98 +70,77 @@ nav a {
 nav a:hover {
   background-color: #fcd116; 
 }
+.breadcrumbs {
+  font-family: 'Arial', sans-serif;
+  margin: 10px 0; /* Añade margen para separar del resto del contenido */
+}
 
-.orgchart {
+.breadcrumbs a {
+  text-decoration: none;
+  color: #000000;
+  margin-right: 5px;
+  font-weight: bold; /* Puedes ajustar el grosor del texto según tu preferencia */
+  transition: color 0.3s ease; /* Efecto de transición para cambiar el color al pasar el ratón */
+}
+
+.breadcrumbs a:hover {
+  color: #fcd116; /* Cambia el color al pasar el ratón */
+}
+
+/* Agrega un separador visual entre los elementos de las migas de pan */
+.breadcrumbs span.separator {
+  margin: 0 5px;
+  color: #777777; /* Puedes ajustar el color según tu preferencia */
+}
+.oylt {
   text-align: center;
   color: #000; 
   padding: 20px;
   margin: 20px 0;
 }
 
-.orgchart h2 {
+.oylt h2 {
   margin: 0;
   font-size: 1.8em;
 }
-#team-tree {
-  list-style-type: none;
+.teams {
+  text-align: left;
+  color: #000; 
   padding: 20px;
+  margin: 20px 0;
 }
 
-.team-member {
+#team-section {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2em;
   align-items: center;
-  margin-bottom: 20px;
 }
 
-.team-member img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-bottom: 10px;
+a {
+  text-decoration: none;
 }
-.team-member button {
+
+button[type="member"] {
   text-align: center;
-  margin: .5em;
-  padding: .5em;
+  margin: 1em;
+  padding: 1em;
   border: 1px solid #000; 
   background-color: #000;
   color: #fff; 
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.team-member button:hover {
+
+button[type="member"]:hover {
   background-color: #fcd116;
 }
 
-.subordinates {
-  list-style-type: none;
-  padding: 0;
-  display: none;
-}
-
-.show-subordinates {
-  cursor: pointer;
-  color: #fcd116;
-  text-decoration: none;
-  margin-top: 5px;
-}
-
-.subordinates.visible {
-  display: flex;
-  flex-direction: row; /* Cambiado de column a row */
-}
-
-.subordinates.visible .team-member {
-  margin-right: 15px; /* Espacio entre los subordinados */
-}
-a {
-  text-decoration: none;
-}
-
-#teams {
-  text-align: right; /* Alinea el contenido a la derecha */
-}
-
-button[type="teamsc"] {
-  text-align: right;
-  margin: 1em;
-  padding: 0.5em 1em;
-  border: 1px solid #000;
-  background-color: #000;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  display: inline-block;
-}
-
-button[type="teamsc"]:hover {
-  background-color: #fcd116;
-}
-
-button[type="teamsc"] h2 {
+button[type="member"] h2 {
   margin: 0;
-  font-size: 1em;
+  font-size: 1.5em;
+  color: #fff;
 }
 
 .yellow-rectangle {
@@ -176,4 +148,3 @@ button[type="teamsc"] h2 {
   height: 50px; 
   width: 100%;
 }
-

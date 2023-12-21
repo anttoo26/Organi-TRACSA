@@ -3,58 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
-  <title>Abastecimiento</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #team-tree {
+      list-style-type: none;
+      padding: 20px;
+    }
+
+    .team-member {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .team-member img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .subordinates {
+      list-style-type: none;
+      padding: 0;
+      display: none;
+    }
+
+    .show-subordinates {
+      cursor: pointer;
+      color: rgb(255, 0, 0);
+      text-decoration: underline;
+      margin-top: 5px;
+    }
+
+    .subordinates.visible {
+      display: flex;
+      flex-direction: row; /* Cambiado de column a row */
+    }
+
+    .subordinates.visible .team-member {
+      margin-right: 20px; /* Espacio entre los subordinados */
+    }
+  </style>
+  <title>Árbol de Miembros del Equipo</title>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="logo">
-              <img src="images/tracsa.png" alt="Logo de la empresa">
-            </div>
-            <div class="search-bar">
-              <input type="text" placeholder="Buscar...">
-              <button onclick="search()">Buscar</button>
-            </div>
-          </div>
-          <nav>
-            <ul>
-              <li><a href="#">Iniciar Sesión</a></li>
-              <li><a href="#">Ingresar</a></li>
-            </ul>
-          </nav>
-    </header>
-    <section id="team-details">
-      <!-- Aquí mostrarás los detalles del equipo seleccionado -->
-      <h2>Detalles del Equipo</h2>
-      <div id="team-members">
-        <!-- Aquí se cargarán los detalles de los miembros del equipo seleccionado -->
-      </div>
-    </section>
-  
-    <section id="team-buttons">
-      <!-- Botones para cada equipo -->
-      <button class="team-button" onclick="toggleTeamInfo('abastecimiento')">Abastecimiento</button>
-      <button class="team-button" onclick="toggleTeamInfo('controldeinv')">Control de Inventario</button>
-      <!-- Agrega más botones según sea necesario -->
-    </section>
-  
-    <section id="team-info-container">
-      <!-- Contenedor para la información detallada de cada equipo -->
-      <div class="team-info" id="abastecimiento-info">
-        <h2>Detalles de Abastecimiento</h2>
-        <p>Información específica para el equipo de Abastecimiento.</p>
-        <!-- Agrega más información según sea necesario -->
-      </div>
-      <div class="team-info" id="controldeinv-info">
-        <h2>Detalles de Control de Inventario</h2>
-        <p>Información específica para el equipo de Control de Inventario.</p>
-        <!-- Agrega más información según sea necesario -->
-      </div>
-      <!-- Agrega más bloques de información según sea necesario -->
-    </section>
-  
-    <script src="script-details.js"></script>
-  </body>
-  </html>
-  
+  <ul id="team-tree">
+    <li class="team-member">
+
+      <img src="images/gatito.jpg" alt="Jefe">
+      <span>Nombre del Jefe</span>
+      <span class="show-subordinates">20</span>
+      <!-- Puedes agregar más subordinados aquí -->
+
+      <ul class="subordinates">
+
+        <li class="team-member">
+          <img src="images/gatito.jpg" alt="Subordinado 1">
+          <span>Nombre Subordinado 1</span>
+          <span class="show-subordinates">10</span>
+
+          <ul class="subordinates">
+
+            <li class="team-member">
+              <img src="images/gatito.jpg" alt="Subordinado 2">
+              <span>Nombre Subordinado 2</span>
+            </li>
+
+            <li class="team-member">
+              <img src="images/gatito.jpg" alt="Subordinado 3">
+              <span>Nombre Subordinado 3</span>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="team-member">
+          <img src="images/gatito.jpg" alt="Subordinado 2">
+          <span>Nombre Subordinado 2</span>
+        </li>
+
+        <li class="team-member">
+          <img src="images/gatito.jpg" alt="Subordinado 3">
+          <span>Nombre Subordinado 3</span>
+        </li>
+
+        <li class="team-member">
+          <img src="images/gatito.jpg" alt="Subordinado 4">
+          <span>Nombre Subordinado 4</span>
+        </li>
+
+        <li class="team-member">
+          <img src="images/gatito.jpg" alt="Subordinado 5">
+          <span>Nombre Subordinado 5</span>
+        </li>
+
+    </li>
+  </ul>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const showSubordinatesButtons = document.querySelectorAll('.show-subordinates');
+
+      showSubordinatesButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const subordinatesList = this.parentElement.querySelector('.subordinates');
+          subordinatesList.classList.toggle('visible');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
